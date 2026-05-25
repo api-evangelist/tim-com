@@ -1,0 +1,221 @@
+aid: tim-com
+name: TIM
+description: >-
+  TIM S.p.A. (formerly Telecom Italia) is the incumbent Italian
+  telecommunications operator headquartered in Rome and one of the largest
+  telcos in Europe. The group operates fixed and mobile networks across Italy
+  under the TIM Consumer and TIM Enterprise brands, runs TIM Brasil (the
+  second-largest mobile operator in Brazil), and owns a portfolio of
+  technology subsidiaries including Sparkle (international connectivity and
+  quantum-safe infrastructure), Noovle (cloud), Telsy (cybersecurity), and
+  Olivetti (IT services). TIM exposes its mobile network as a programmable
+  platform through the developer.tim.it portal in Italy and through
+  TIM Open Gateway in Brazil, both implementing CAMARA-standard network APIs
+  (SIM Swap, Number Verification, Know Your Customer, IP-to-MSISDN, IP-to-
+  Number, Device Location) jointly defined by the Linux Foundation, TM Forum,
+  and GSMA. These APIs let banks, fintechs, insurers, retailers, and online
+  services authenticate users, detect SIM-swap fraud, verify customer
+  identity, and locate devices using TIM's mobile network as the trust anchor.
+  As of late 2025 TIM Brasil reported 50 million Open Gateway API queries
+  across its catalog.
+type: Index
+position: Provider
+access: 3rd-Party
+kind: contract
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Telecommunications
+  - Telco
+  - Mobile Network Operator
+  - Network APIs
+  - CAMARA
+  - Open Gateway
+  - GSMA
+  - SIM Swap
+  - Number Verification
+  - Know Your Customer
+  - Identity
+  - Anti-Fraud
+  - Italy
+  - Brazil
+  - 5G
+url: https://raw.githubusercontent.com/api-evangelist/tim-com/refs/heads/main/apis.yml
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: tim-com:tim-sim-swap
+    name: TIM SIM Swap
+    description: >-
+      CAMARA-aligned API that returns the timestamp of the last SIM swap
+      (or whether a swap occurred within a caller-supplied window) for a
+      given TIM mobile number. Used by banks and fintechs as a signal
+      against account-takeover and SIM-swap fraud before authorizing
+      sensitive transactions.
+    humanURL: https://developer.tim.it/security/TIM%20SIM%20Swap/dev
+    tags:
+      - Security
+      - SIM Swap
+      - Anti-Fraud
+      - CAMARA
+      - GSMA
+    properties:
+      - type: Documentation
+        url: https://developer.tim.it/security/TIM%20SIM%20Swap/dev
+      - type: Documentation
+        url: https://www.tim.com.br/open-gateway/sim-swap
+        name: TIM Brasil SIM Swap
+      - type: Standard
+        url: https://github.com/camaraproject/SimSwap
+        name: CAMARA SimSwap reference
+  - aid: tim-com:tim-number-verification
+    name: TIM Number Verification
+    description: >-
+      CAMARA Number Verification API that authenticates a mobile device
+      by silently confirming the MSISDN bound to the active mobile data
+      session against the number asserted by the application. Eliminates
+      the need for SMS-OTP and replaces it with passive carrier-grade
+      verification.
+    humanURL: https://developer.tim.it/security/TIM%20Number%20Verification/dev
+    tags:
+      - Security
+      - Number Verification
+      - Passwordless
+      - CAMARA
+      - GSMA
+    properties:
+      - type: Documentation
+        url: https://developer.tim.it/security/TIM%20Number%20Verification/dev
+      - type: Documentation
+        url: https://www.tim.com.br/open-gateway/number-verify
+        name: TIM Brasil Number Verify
+      - type: Standard
+        url: https://github.com/camaraproject/NumberVerification
+        name: CAMARA NumberVerification reference
+  - aid: tim-com:tim-know-your-customer-match
+    name: TIM Know Your Customer - Match
+    description: >-
+      KYC Match API that compares customer-supplied attributes (name, tax
+      ID, date of birth, address) against TIM's subscriber records and
+      returns per-attribute match scores. Used during onboarding to
+      validate identity claims, populate registration forms, and reduce
+      manual KYC review.
+    humanURL: https://developer.tim.it/security/TIM%20Know%20Your%20Customer%20-%20Match/dev
+    tags:
+      - Security
+      - KYC
+      - Identity Verification
+      - CAMARA
+      - GSMA
+    properties:
+      - type: Documentation
+        url: https://developer.tim.it/security/TIM%20Know%20Your%20Customer%20-%20Match/dev
+      - type: Documentation
+        url: https://www.tim.com.br/open-gateway/know-your-customer
+        name: TIM Brasil KYC
+      - type: Standard
+        url: https://github.com/camaraproject/KnowYourCustomer
+        name: CAMARA KnowYourCustomer reference
+  - aid: tim-com:tim-ip-to-msisdn
+    name: TIM IP to MSISDN
+    description: >-
+      Given an IP address observed by a relying party, returns the TIM
+      mobile number (MSISDN) currently associated with that radio session.
+      Intended for banking and payment apps that need to bind an in-app
+      action to a known mobile number without an OTP round-trip.
+    humanURL: https://developer.tim.it/security/TIM%20IP%20to%20MSISDN/dev
+    tags:
+      - Security
+      - IP Lookup
+      - MSISDN
+      - Anti-Fraud
+    properties:
+      - type: Documentation
+        url: https://developer.tim.it/security/TIM%20IP%20to%20MSISDN/dev
+  - aid: tim-com:tim-ip-to-number
+    name: TIM IP to Number
+    description: >-
+      Given an IP address, returns the TIM fixed-line or mobile number
+      associated with the session. Extends IP-to-MSISDN to cover both
+      mobile and broadband subscribers for fraud and access-control use
+      cases.
+    humanURL: https://developer.tim.it/security/TIM%20IP%20to%20Number/dev
+    tags:
+      - Security
+      - IP Lookup
+      - Fixed Line
+      - Anti-Fraud
+    properties:
+      - type: Documentation
+        url: https://developer.tim.it/security/TIM%20IP%20to%20Number/dev
+  - aid: tim-com:tim-device-location
+    name: TIM Device Location
+    description: >-
+      CAMARA Device Location verification API offered by TIM Brasil Open
+      Gateway. Confirms whether a mobile device is physically within a
+      supplied geographic area at request time, supporting geofenced
+      authentication, claims validation, and fraud checks.
+    humanURL: https://www.tim.com.br/open-gateway/device-location
+    tags:
+      - Location
+      - Device Location
+      - Anti-Fraud
+      - CAMARA
+      - GSMA
+    properties:
+      - type: Documentation
+        url: https://www.tim.com.br/open-gateway/device-location
+      - type: Standard
+        url: https://github.com/camaraproject/DeviceLocation
+        name: CAMARA DeviceLocation reference
+common:
+  - type: Website
+    url: https://www.gruppotim.it/en.html
+  - type: Website
+    url: https://www.tim.it
+    name: TIM Italy
+  - type: Website
+    url: https://www.tim.com.br
+    name: TIM Brasil
+  - type: Portal
+    url: https://developer.tim.it
+    name: TIM Developer Portal (Italy)
+  - type: Portal
+    url: https://www.tim.com.br/open-gateway
+    name: TIM Open Gateway (Brazil)
+  - type: Documentation
+    url: https://developer.tim.it/apis-developer
+    name: TIM API Catalog
+  - type: Standard
+    url: https://camaraproject.org/
+    name: CAMARA Project (Linux Foundation)
+  - type: About
+    url: https://www.gruppotim.it/en/group.html
+  - type: PressRelease
+    url: https://www.tim.com.br/sobre-a-tim/sala-de-imprensa/press-releases/institucional/tim-lanca-novas-apis
+    name: TIM Brasil Open Gateway launch
+  - type: Subsidiary
+    url: https://www.tisparkle.com/
+    name: Sparkle
+  - type: Subsidiary
+    url: https://www.noovle.com/
+    name: Noovle
+  - type: Subsidiary
+    url: https://www.telsy.com/
+    name: Telsy
+  - type: Subsidiary
+    url: https://www.olivetti.com/
+    name: Olivetti
+  - type: InvestorRelations
+    url: https://www.gruppotim.it/en/investors.html
+  - type: Careers
+    url: https://www.gruppotim.it/en/careers.html
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/tim-official-page/
+  - type: Twitter
+    url: https://twitter.com/TIMnewsroom
+  - type: YouTube
+    url: https://www.youtube.com/user/TIM
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

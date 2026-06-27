@@ -65,7 +65,7 @@ apis:
       - type: Documentation
         url: https://www.tim.com.br/open-gateway/sim-swap
         name: TIM Brasil SIM Swap
-      - type: Standard
+      - type: Standards
         url: https://github.com/camaraproject/SimSwap
         name: CAMARA SimSwap reference
   - aid: tim-com:tim-number-verification
@@ -89,7 +89,7 @@ apis:
       - type: Documentation
         url: https://www.tim.com.br/open-gateway/number-verify
         name: TIM Brasil Number Verify
-      - type: Standard
+      - type: Standards
         url: https://github.com/camaraproject/NumberVerification
         name: CAMARA NumberVerification reference
   - aid: tim-com:tim-know-your-customer-match
@@ -113,7 +113,7 @@ apis:
       - type: Documentation
         url: https://www.tim.com.br/open-gateway/know-your-customer
         name: TIM Brasil KYC
-      - type: Standard
+      - type: Standards
         url: https://github.com/camaraproject/KnowYourCustomer
         name: CAMARA KnowYourCustomer reference
   - aid: tim-com:tim-ip-to-msisdn
@@ -165,7 +165,7 @@ apis:
     properties:
       - type: Documentation
         url: https://www.tim.com.br/open-gateway/device-location
-      - type: Standard
+      - type: Standards
         url: https://github.com/camaraproject/DeviceLocation
         name: CAMARA DeviceLocation reference
 common:
@@ -186,7 +186,7 @@ common:
   - type: Documentation
     url: https://developer.tim.it/apis-developer
     name: TIM API Catalog
-  - type: Standard
+  - type: Standards
     url: https://camaraproject.org/
     name: CAMARA Project (Linux Foundation)
   - type: About

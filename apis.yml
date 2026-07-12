@@ -169,6 +169,10 @@ apis:
         url: https://github.com/camaraproject/DeviceLocation
         name: CAMARA DeviceLocation reference
 common:
+  - type: VulnerabilityDisclosure
+    url: security/tim-com-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/tim-com-domain-security.yml
   - type: Website
     url: https://www.gruppotim.it/en.html
   - type: Website

@@ -47,7 +47,6 @@ kind: contract
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tim-com.png
 tags:
   - Telecommunications
-  - Telco
   - Mobile Network Operator
   - Network APIs
   - CAMARA
@@ -57,7 +56,7 @@ tags:
   - Number Verification
   - KYC
   - Identity
-  - Anti-Fraud
+  - Fraud Prevention
   - Italy
   - Brazil
   - 5G
@@ -92,6 +91,12 @@ apis:
       sensitive transactions.
     humanURL: https://developer.tim.it/security/TIM%20SIM%20Swap/dev
     tags:
+      - Security
+      - SIM Swap
+      - Fraud Prevention
+      - CAMARA
+      - GSMA
+    tags_raw:
       - Security
       - SIM Swap
       - Anti-Fraud
@@ -166,6 +171,11 @@ apis:
       - Security
       - IP Lookup
       - MSISDN
+      - Fraud Prevention
+    tags_raw:
+      - Security
+      - IP Lookup
+      - MSISDN
       - Anti-Fraud
     properties:
       - type: Documentation
@@ -182,6 +192,11 @@ apis:
       - Security
       - IP Lookup
       - Fixed Line
+      - Fraud Prevention
+    tags_raw:
+      - Security
+      - IP Lookup
+      - Fixed Line
       - Anti-Fraud
     properties:
       - type: Documentation
@@ -195,6 +210,12 @@ apis:
       authentication, claims validation, and fraud checks.
     humanURL: https://www.tim.com.br/open-gateway/device-location
     tags:
+      - Location
+      - Device Location
+      - Fraud Prevention
+      - CAMARA
+      - GSMA
+    tags_raw:
       - Location
       - Device Location
       - Anti-Fraud

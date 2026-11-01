@@ -1,4 +1,4 @@
-# TIM (tim-com)
+# TIM
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,93 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-TIM S.p.A. (formerly Telecom Italia) is the incumbent Italian telecommunications operator and parent of TIM Brasil, the second-largest mobile operator in Brazil. The group exposes its mobile network as a programmable platform through the `developer.tim.it` portal in Italy and TIM Open Gateway in Brazil, both implementing CAMARA-standard network APIs (SIM Swap, Number Verification, Know Your Customer, IP-to-MSISDN, IP-to-Number, Device Location) jointly defined by the Linux Foundation, TM Forum, and GSMA.
+TIM S.p.A. (formerly Telecom Italia) is the incumbent Italian telecommunications operator headquartered in Rome and one of the largest telcos in Europe. The group operates fixed and mobile networks across Italy under the TIM Consumer and TIM Enterprise brands, runs TIM Brasil (the second-largest mobile operator in Brazil), and owns a portfolio of technology subsidiaries including Sparkle (international connectivity and quantum-safe infrastructure), Noovle (cloud), Telsy (cybersecurity), and Olivetti (IT services). TIM exposes its mobile network as a programmable platform through the developer.tim.it portal in Italy and through TIM Open Gateway in Brazil, both implementing CAMARA-standard network APIs (SIM Swap, Number Verification, Know Your Customer, IP-to-MSISDN, IP-to- Number, Device Location) jointly defined by the Linux Foundation, TM Forum, and GSMA. These APIs let banks, fintechs, insurers, retailers, and online services authenticate users, detect SIM-swap fraud, verify customer identity, and locate devices using TIM's mobile network as the trust anchor. As of late 2025 TIM Brasil reported 50 million Open Gateway API queries across its catalog.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/tim-com/refs/heads/main/apis.yml)
+**Areas:** Telecommunications · Mobile Network Operator · Network APIs · CAMARA · Open Gateway · GSMA · SIM Swap · Number Verification · KYC · Identity · Fraud Prevention · Italy
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## TIM on APIs.io
 
-## Tags
+Everything profiled for TIM is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tim-com/](https://apis.io/providers/tim-com/)** — or go straight to one of the APIs or properties below.
 
-- Telecommunications, Telco, Mobile Network Operator, Network APIs, CAMARA, Open Gateway, GSMA, SIM Swap, Number Verification, Know Your Customer, Identity, Anti-Fraud, Italy, Brazil, 5G
+### APIs (6)
 
-## Timestamps
+- [TIM SIM Swap](https://apis.io/apis/tim-com/tim-sim-swap/) — CAMARA-aligned API that returns the timestamp of the last SIM swap (or whether a swap occurred within a caller-supplied window) for a given TIM mobile…
+- [TIM Number Verification](https://apis.io/apis/tim-com/tim-number-verification/) — CAMARA Number Verification API that authenticates a mobile device by silently confirming the MSISDN bound to the active mobile data session against the…
+- [TIM Know Your Customer - Match](https://apis.io/apis/tim-com/tim-know-your-customer-match/) — KYC Match API that compares customer-supplied attributes (name, tax ID, date of birth, address) against TIM's subscriber records and returns per-attribute…
+- [TIM IP to MSISDN](https://apis.io/apis/tim-com/tim-ip-to-msisdn/) — Given an IP address observed by a relying party, returns the TIM mobile number (MSISDN) currently associated with that radio session. Intended for banking…
+- [TIM IP to Number](https://apis.io/apis/tim-com/tim-ip-to-number/) — Given an IP address, returns the TIM fixed-line or mobile number associated with the session. Extends IP-to-MSISDN to cover both mobile and broadband…
+- [TIM Device Location](https://apis.io/apis/tim-com/tim-device-location/) — CAMARA Device Location verification API offered by TIM Brasil Open Gateway. Confirms whether a mobile device is physically within a supplied geographic area…
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### TIM SIM Swap
-CAMARA-aligned API returning the timestamp of the last SIM swap (or whether one occurred within a caller-supplied window) for a TIM mobile number. Used by banks and fintechs as a signal against account-takeover fraud.
+#### Security (2)
 
-**Human URL:** [https://developer.tim.it/security/TIM%20SIM%20Swap/dev](https://developer.tim.it/security/TIM%20SIM%20Swap/dev)
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation (Italy)](https://developer.tim.it/security/TIM%20SIM%20Swap/dev)
-- [Documentation (Brazil)](https://www.tim.com.br/open-gateway/sim-swap)
-- [CAMARA SimSwap reference](https://github.com/camaraproject/SimSwap)
+- [Tim Com Domain Security](https://apis.io/security/tim-com/tim-com-domain-security/)
+- [Tim Com Vulnerability Disclosure](https://apis.io/security/tim-com/tim-com-vulnerability-disclosure/)
 
-### TIM Number Verification
-CAMARA Number Verification API that silently confirms the MSISDN bound to the active mobile data session against the number asserted by the application. Replaces SMS-OTP with passive carrier-grade verification.
+## Where to find this API
 
-**Human URL:** [https://developer.tim.it/security/TIM%20Number%20Verification/dev](https://developer.tim.it/security/TIM%20Number%20Verification/dev)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Documentation (Italy)](https://developer.tim.it/security/TIM%20Number%20Verification/dev)
-- [Documentation (Brazil)](https://www.tim.com.br/open-gateway/number-verify)
-- [CAMARA NumberVerification reference](https://github.com/camaraproject/NumberVerification)
+- [Website](https://www.gruppotim.it/en.html)
+- [Documentation](https://developer.tim.it/apis-developer)
 
-### TIM Know Your Customer - Match
-KYC Match API that compares customer-supplied attributes (name, tax ID, date of birth, address) against TIM's subscriber records and returns per-attribute match scores. Used during onboarding to validate identity claims and reduce manual KYC review.
+## API Evangelist rating
 
-**Human URL:** [https://developer.tim.it/security/TIM%20Know%20Your%20Customer%20-%20Match/dev](https://developer.tim.it/security/TIM%20Know%20Your%20Customer%20-%20Match/dev)
+**Kin Score 8.5** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-- [Documentation (Italy)](https://developer.tim.it/security/TIM%20Know%20Your%20Customer%20-%20Match/dev)
-- [Documentation (Brazil)](https://www.tim.com.br/open-gateway/know-your-customer)
-- [CAMARA KnowYourCustomer reference](https://github.com/camaraproject/KnowYourCustomer)
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 0.0 |
 
-### TIM IP to MSISDN
-Given an IP address observed by a relying party, returns the TIM mobile number (MSISDN) currently associated with that radio session. Used by banking and payment apps to bind in-app actions to a known mobile number without an OTP round-trip.
+**Agent readiness 0.0** — human-only
 
-**Human URL:** [https://developer.tim.it/security/TIM%20IP%20to%20MSISDN/dev](https://developer.tim.it/security/TIM%20IP%20to%20MSISDN/dev)
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-- [Documentation](https://developer.tim.it/security/TIM%20IP%20to%20MSISDN/dev)
+**Regulatory alignment 10.0** — Telecommunications
 
-### TIM IP to Number
-Given an IP address, returns the TIM fixed-line or mobile number associated with the session. Extends IP-to-MSISDN to cover both mobile and broadband subscribers for fraud and access-control use cases.
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tim-com/](https://apis.io/providers/tim-com/).
 
-**Human URL:** [https://developer.tim.it/security/TIM%20IP%20to%20Number/dev](https://developer.tim.it/security/TIM%20IP%20to%20Number/dev)
+## How this profile is made
 
-- [Documentation](https://developer.tim.it/security/TIM%20IP%20to%20Number/dev)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### TIM Device Location
-CAMARA Device Location verification API offered by TIM Brasil Open Gateway. Confirms whether a mobile device is physically within a supplied geographic area at request time, supporting geofenced authentication and fraud checks.
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for TIM: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-**Human URL:** [https://www.tim.com.br/open-gateway/device-location](https://www.tim.com.br/open-gateway/device-location)
+## Open an issue
 
-- [Documentation](https://www.tim.com.br/open-gateway/device-location)
-- [CAMARA DeviceLocation reference](https://github.com/camaraproject/DeviceLocation)
-
-## Common
-
-- [Website — TIM Group](https://www.gruppotim.it/en.html)
-- [Website — TIM Italy](https://www.tim.it)
-- [Website — TIM Brasil](https://www.tim.com.br)
-- [Portal — TIM Developer Portal (Italy)](https://developer.tim.it)
-- [Portal — TIM Open Gateway (Brazil)](https://www.tim.com.br/open-gateway)
-- [TIM API Catalog](https://developer.tim.it/apis-developer)
-- [Standard — CAMARA Project (Linux Foundation)](https://camaraproject.org/)
-- [About — TIM Group](https://www.gruppotim.it/en/group.html)
-- [Press Release — TIM Brasil Open Gateway launch](https://www.tim.com.br/sobre-a-tim/sala-de-imprensa/press-releases/institucional/tim-lanca-novas-apis)
-- [Subsidiary — Sparkle](https://www.tisparkle.com/)
-- [Subsidiary — Noovle](https://www.noovle.com/)
-- [Subsidiary — Telsy](https://www.telsy.com/)
-- [Subsidiary — Olivetti](https://www.olivetti.com/)
-- [Investor Relations](https://www.gruppotim.it/en/investors.html)
-- [Careers](https://www.gruppotim.it/en/careers.html)
-- [LinkedIn](https://www.linkedin.com/company/tim-official-page/)
-- [Twitter](https://twitter.com/TIMnewsroom)
-- [YouTube](https://www.youtube.com/user/TIM)
-
-## Maintainers
-
-- **Kin Lane** — kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tim-com/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
